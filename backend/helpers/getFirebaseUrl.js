@@ -2,9 +2,11 @@ const storage = require('../config/firebaseConfig');
 const { ref, getDownloadURL } = require('firebase/storage');
 
 const getURL = async () => {
-  getDownloadURL(ref(storage, 'images/NISHANT_compr.jpg')).then((url) => {
-    console.log(url);
-  });
+  getDownloadURL(ref(storage, 'trailers/MeetTheParents_1597.mov')).then(
+    (url) => {
+      console.log(url);
+    }
+  );
 };
 
 module.exports = getURL;
