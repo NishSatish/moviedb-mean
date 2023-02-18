@@ -1,0 +1,39 @@
+.movie-page {
+  // padding: 50px;
+  height: 100vh;
+}
+
+.trailer {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  margin-bottom: 30px;
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.movie-name {
+  h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+  }
+}
+
+.year,
+.date,
+.cast {
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 1.5em;
+  line-height: 1.3em;
+}

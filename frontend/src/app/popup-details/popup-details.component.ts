@@ -17,7 +17,7 @@ export default class PopupDetailsComponent implements OnInit {
     private moviesService: MoviesService
   ) {}
 
-  public movieDetails: any;
+  public movieDetails: any = {};
 
   ngOnInit(): void {
     this.moviesService.getPopupDetails(this.data).subscribe((res) => {

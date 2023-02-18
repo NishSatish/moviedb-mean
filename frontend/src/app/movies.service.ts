@@ -18,4 +18,8 @@ export class MoviesService {
       'http://localhost:3001/getMoviePopupDetails/' + movieId
     );
   };
+
+  getCompleteMovie = (movieId: number) => {
+    return this.http.get('http://localhost:3001/getCompleteMovie/' + movieId);
+  };
 }

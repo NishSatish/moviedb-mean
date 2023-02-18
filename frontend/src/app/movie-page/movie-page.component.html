@@ -1,1 +1,21 @@
-<p>movie-page works!</p>
+<div class="movie-page">
+  <div class="trailer">
+    <video controls #video autoplay="true">
+      <!-- Dynamically create and append source tag in ngOnInit() -->
+    </video>
+  </div>
+  <div class="movie-name">
+    <h1>{{ details.name }}</h1>
+  </div>
+  <div class="year">{{ details.year }}</div>
+  <div class="date">{{ details.duration }} mins</div>
+  <div class="cast">
+    Cast:
+    <span *ngFor="let actor of details.actors">{{ actor }}, </span>
+    <br />
+    Director: {{ details.director }}
+  </div>
+  <div class="description">
+    {{ details.description }}
+  </div>
+</div>
