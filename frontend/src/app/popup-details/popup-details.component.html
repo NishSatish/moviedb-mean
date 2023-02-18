@@ -1,0 +1,29 @@
+<div class="popup">
+  <div class="poster">
+    <img [src]="movieDetails!.image" alt="" />
+  </div>
+
+  <div class="movie-info">
+    <div class="title">
+      {{ movieDetails.name }}
+    </div>
+    <div class="year-duration">
+      <span class="year">Release: {{ movieDetails.year }}</span>
+      <span class="duration">Duration: {{ movieDetails.duration }}mins</span>
+    </div>
+    <div class="description">{{ movieDetails.description }}</div>
+    <div class="links">
+      <button
+        mat-raised-button
+        class="go"
+        [routerLink]="['', movieDetails.id]"
+        (click)="closePopup()"
+      >
+        View More
+      </button>
+      <button mat-raised-button (click)="closePopup()" class="close">
+        Close
+      </button>
+    </div>
+  </div>
+</div>

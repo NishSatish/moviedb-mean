@@ -1,0 +1,61 @@
+img {
+  width: 100%;
+}
+
+.poster {
+  margin-right: 40px;
+  max-width: 300px;
+}
+
+.popup {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-info {
+  width: 60%;
+  padding-top: 20px;
+
+  .title {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.1em;
+  }
+
+  .year-duration {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  .duration {
+    position: absolute;
+    right: 0;
+  }
+
+  .description {
+    margin-top: 20px;
+  }
+}
+
+.links {
+  margin-top: 20px;
+
+  .close {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 594px) {
+  .movie-info {
+    .year-duration {
+      flex-direction: column;
+    }
+    .duration {
+      position: initial;
+      right: initial;
+    }
+  }
+}

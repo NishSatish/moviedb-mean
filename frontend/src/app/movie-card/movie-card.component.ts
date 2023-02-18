@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class MovieCardComponent {
   @Input() name = '';
   @Input() image = '';
+  @Input() id = '';
 }

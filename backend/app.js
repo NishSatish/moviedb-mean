@@ -19,6 +19,19 @@ connectDB()
 // SEED DUMMY DATA IN THE DATABASE
 // seedDummyData();
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  );
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, PUT, PATCH, DELETE, OPTIONS'
+  );
+  next();
+});
+
 app.use('/getFileURL', async (req, res) => {
   //Only for the sake of getting the URL to add it in the database,
   // in reality we can just use Firebase directly instead of using a DB

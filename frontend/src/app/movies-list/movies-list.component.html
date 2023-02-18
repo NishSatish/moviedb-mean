@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1>MOVIES</h1>
+  <p class="subheading">Click on any of the movie titles for more details</p>
+</div>
+
+<div class="movielist">
+  <MovieCard
+    *ngFor="let movie of movies"
+    [name]="movie.name"
+    [image]="movie.image"
+    [id]="movie.id"
+    (click)="!disableCard ? clickMe(movie.id) : null"
+  ></MovieCard>
+</div>
